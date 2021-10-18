@@ -28,7 +28,16 @@ public class Demo {
         String line = "hello!!!" + p;
         System.out.println(line);
 
+        /*
+        Object定义的方法
+        boolean equals(Object o)
+        比较当前对象和参数对象o内容是否相同，相同则返回true否则为false
+        Object中该方法的实现内部用“==”比较，因此子类不重写该方法没有实际意义
+         */
         Point p2 = new Point(1,2);
         System.out.println("p2:"+p2);
+
+        System.out.println(p==p2);
+        System.out.println(p.equals(p2));
     }
 }
