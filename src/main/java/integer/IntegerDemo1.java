@@ -25,5 +25,16 @@ public class IntegerDemo1 {
         Double d2 = Double.valueOf(123.123);
         System.out.println(d1==d2);
         System.out.println(d1.equals(d2));
+
+        //包装类转换回基本类型
+        int ii = i1.intValue();
+        double dd = i1.doubleValue();
+        System.out.println(ii);
+        System.out.println(dd);
+
+        ii = d1.intValue();//大类型转小类型会丢精度
+        dd = d1.doubleValue();
+        System.out.println(ii);
+        System.out.println(dd);
     }
 }
