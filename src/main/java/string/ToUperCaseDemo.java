@@ -1,7 +1,5 @@
 package string;
 
-import java.util.Locale;
-
 /**
  * String toUpperCase();
  * String toLowerCase();
