@@ -27,5 +27,8 @@ public class Demo {
          */
         String line = "hello!!!" + p;
         System.out.println(line);
+
+        Point p2 = new Point(1,2);
+        System.out.println("p2:"+p2);
     }
 }
