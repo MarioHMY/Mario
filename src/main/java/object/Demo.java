@@ -17,5 +17,9 @@ public class Demo {
          */
         String str = p.toString();
         System.out.println(str);
+
+        //以下情况对象的toString会被调用：
+        //1.输出一个对象到控制台
+        System.out.println(p);//方法内部会调用p.toString将返回的字符串输出到控制台
     }
 }
