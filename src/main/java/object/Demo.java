@@ -21,5 +21,11 @@ public class Demo {
         //以下情况对象的toString会被调用：
         //1.输出一个对象到控制台
         System.out.println(p);//方法内部会调用p.toString将返回的字符串输出到控制台
+
+        /*
+        2：任何对象和字符串链接结果都是字符串（过程中会将其他对象调用toString转化为String后链接）
+         */
+        String line = "hello!!!" + p;
+        System.out.println(line);
     }
 }
