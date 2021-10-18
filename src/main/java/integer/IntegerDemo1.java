@@ -19,5 +19,11 @@ public class IntegerDemo1 {
         Integer i4 = Integer.valueOf(i);
         System.out.println(i3==i4);
         System.out.println(i3.equals(i4));
+
+        //Double的valueOf内部就是直接new对象
+        Double d1 = Double.valueOf(123.123);
+        Double d2 = Double.valueOf(123.123);
+        System.out.println(d1==d2);
+        System.out.println(d1.equals(d2));
     }
 }
