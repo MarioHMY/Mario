@@ -26,5 +26,10 @@ public class FileDemo {
         //获取文件大小（单位是字节）
         long len = file.length();
         System.out.println(len);
+
+        boolean cr = file.canRead();
+        boolean cw = file.canWrite();
+        System.out.println("是否可读:"+cr);
+        System.out.println("是否可写:"+cw);
     }
 }
