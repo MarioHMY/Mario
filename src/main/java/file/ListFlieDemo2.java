@@ -9,19 +9,26 @@ import java.io.FileFilter;
 public class ListFlieDemo2 {
     public static void main(String[] args) {
         /*
-        需求：获取当前目录中所有以“."开头的子项
+            需求:获取当前目录中所有名字以"."开始的子项
          */
         File dir = new File(".");
         if(dir.isDirectory()){
-            FileFilter filter = new FileFilter(){//匿名内部类创建过滤器
+//            FileFilter filter = new FileFilter(){//匿名内部类创建过滤器
+//                public boolean accept(File file) {
+//                    String name = file.getName();
+//                    boolean starts = name.startsWith(".");//名字是否以"."开始
+//                    System.out.println("过滤器过滤:"+name+",是否符合要求:"+starts);
+//                    return starts;
+//                }
+//            };
+//            File[] subs = dir.listFiles(filter);//方法内部会调用accept方法
+
+
+            File[] subs = dir.listFiles(new FileFilter(){
                 public boolean accept(File file) {
-                    String name = file.getName();
-                    boolean starts = name.startsWith(".");//名字是否以"."开始
-                    System.out.println("过滤器过滤:"+name+",是否符合要求:"+starts);
-                    return starts;
+                    return file.getName().startsWith(".");
                 }
-            };
-             File[] subs = dir.listFiles(filter);//方法内部会调用accept方法
+            });
             System.out.println(subs.length);
         }
     }
